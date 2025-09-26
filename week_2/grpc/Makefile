@@ -28,7 +28,5 @@ copy-to-server:
 	scp service_linux root@45.12.231.86:
 
 docker-build-and-push:
-	docker buildx build --no-cache --platform linux/amd64 -t cr.selcloud.ru/olezhek28/test-server:v0.0.1 .
-	docker login -u token -p CRgAAAAA6ELvdoGnA7EL4qSbkICKeDkVldDC2OOU cr.selcloud.ru/olezhek28
-	docker push cr.selcloud.ru/olezhek28/test-server:v0.0.1
-
+	docker buildx build --no-cache --platform linux/amd64 -t $(REGISTRY)/$(IMAGE_NAME):$(TAG) -f week_2/grpc/Dockerfile week_2/grpc/
+	docker push $(REGISTRY)/$(IMAGE_NAME):$(TAG)
