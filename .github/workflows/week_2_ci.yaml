@@ -8,7 +8,7 @@ on:
 
 env:
   REGISTRY: "registry.digitalocean.com/mrev"
-  IMAGE_NAME: "crud-server2"
+  IMAGE_NAME: "crud-server"
   CONTAINER_NAME: "crud-server-container"
 
 jobs:
