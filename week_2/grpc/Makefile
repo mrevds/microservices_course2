@@ -25,7 +25,7 @@ build:
 	GOOS=linux GOARCH=amd64 go build -o service_linux cmd/grpc_server/main.go
 
 copy-to-server:
-	scp service_linux root@45.12.231.86:
+	scp service_linux root@146.190.167.0:
 
 docker-build-and-push:
 	docker buildx build --no-cache --platform linux/amd64 -t $(REGISTRY)/$(IMAGE_NAME):$(TAG) -f week_2/grpc/Dockerfile week_2/grpc/
