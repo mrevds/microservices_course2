@@ -8,8 +8,9 @@ on:
 
 env:
   REGISTRY: "registry.digitalocean.com/mrev"
-  IMAGE_NAME: "crud-server3"
-  CONTAINER_NAME: "crud-server-container"
+  IMAGE_NAME: "test-server"   # имя репозитория (одно и то же всегда)
+  CONTAINER_NAME: "test-server"
+
 
 jobs:
   image-build-and-push:
